@@ -2,17 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 114: expected statement.
-    Dora : "aku harus kembali melakukan perjalanan, nanti tuan akan menunggu ku sangat lama, aku tidak boleh melanjutkan isitirahat,"
-         ^
-
-File "game/script.rpy", line 119: expected statement.
-    Dora : "Aku lelah, aku butuh istirahat"
-         ^
-
-File "game/script.rpy", line 120: expected statement.
-    Dora : "namun kasian ajisaka, ia bisa menunggu ku terlalu lama jika aku beristirahat"
-         ^
+File "game/screens.rpy", line 1498: style property zoom is not known.
+    zoom 0.5
+        ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Mon May 15 11:58:30 2023
+Sun May 21 22:25:39 2023

@@ -158,7 +158,7 @@ style say_dialogue:
 
     xpos gui.dialogue_xpos
     xsize 1120
-    ypos -40
+    ypos -20
 
     adjust_spacing False
 
@@ -244,19 +244,20 @@ screen quick_menu():
     if quick_menu:
 
         hbox:
-            style_prefix "quick"
+            yoffset -50
+            style_prefix "quick" 
 
             xalign 0.5
             yalign 1.0
 
             textbutton _("Back") action Rollback()
-            textbutton _("History") action ShowMenu('history')
-            textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
+            # textbutton _("History") action ShowMenu('history')
+            # textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
             textbutton _("Auto") action Preference("auto-forward", "toggle")
             textbutton _("Save") action ShowMenu('save')
-            textbutton _("Q.Save") action QuickSave()
-            textbutton _("Q.Load") action QuickLoad()
-            textbutton _("Prefs") action ShowMenu('preferences')
+            # textbutton _("Q.Save") action QuickSave()
+            # textbutton _("Q.Load") action QuickLoad()
+            textbutton _("Menu") action ShowMenu('preferences')
 
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
@@ -291,7 +292,7 @@ screen navigation():
             style_prefix "hnavigation"
 
             xalign 0.5
-            yalign 0.5
+            yalign 0.6
 
             spacing gui.navigation_spacing
 
@@ -301,7 +302,7 @@ screen navigation():
 
             else:
 
-                textbutton _("History") action ShowMenu("history")
+                # textbutton _("History") action ShowMenu("history")
 
                 textbutton _("Save") action ShowMenu("save")
 
@@ -345,7 +346,7 @@ screen navigation():
 
             else:
 
-                textbutton _("History") action ShowMenu("history")
+                # textbutton _("History") action ShowMenu("history")
 
                 textbutton _("Save") action ShowMenu("save")
 
@@ -1494,6 +1495,8 @@ style nvl_window:
 style main_menu_frame:
     variant "small"
     background "gui/phone/overlay/main_menu.png"
+    xsize 1
+    ysize 5
 
 style game_menu_outer_frame:
     variant "small"
